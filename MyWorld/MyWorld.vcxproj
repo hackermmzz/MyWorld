@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************************************
+ Copyright (C) 2023 The Qt Company Ltd.
+ SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+***************************************************************************************************
+-->
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{278DA415-D5D0-484E-9662-2C95A6ED96FA}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;opengl;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>C:\VS_Project\MyWorld2\MyWorld\Packaged\Include;C:\VS_Project\MyWorld2\MyWorld\Packaged;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\VS_Project\MyWorld2\MyWorld\ExternalLib;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\VS_Project\MyWorld2\MyWorld\Packaged\Cpp;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>C:\VS_Project\MyWorld2\MyWorld\Packaged;C:\VS_Project\MyWorld2\MyWorld\Packaged\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\VS_Project\MyWorld2\MyWorld\ExternalLib;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\VS_Project\MyWorld2\MyWorld\Packaged\Cpp;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>assimp-vc143-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>assimp-vc143-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Packaged\Cpp\AnimationPlayer.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\ParticleSystem.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\Texture1D.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\TransformFeedBack.cpp" />
+    <ClCompile Include="bag.cpp" />
+    <ClCompile Include="BagButton.cpp" />
+    <ClCompile Include="exposureadjust.cpp" />
+    <ClCompile Include="Info.cpp" />
+    <ClCompile Include="itemboard.cpp" />
+    <ClCompile Include="MyWorld\afterrendering.cpp" />
+    <ClCompile Include="MyWorld\BackWardProcess.cpp" />
+    <ClCompile Include="MyWorld\Bag\.DrawBag.cpp" />
+    <ClCompile Include="MyWorld\Bag\BagGlobalSource.cpp" />
+    <ClCompile Include="MyWorld\Bag\BagInit.cpp" />
+    <ClCompile Include="MyWorld\Bag\DrawBag.cpp" />
+    <ClCompile Include="MyWorld\Bag\DrawItemBoard.cpp" />
+    <ClCompile Include="MyWorld\Bag\UpdateItemBoard.cpp" />
+    <ClCompile Include="MyWorld\Bag\UpdateWorkSpace.cpp" />
+    <ClCompile Include="MyWorld\Biome\BiomeBase.cpp" />
+    <ClCompile Include="MyWorld\Biome\Desert.cpp" />
+    <ClCompile Include="MyWorld\Biome\Forest.cpp" />
+    <ClCompile Include="MyWorld\Biome\GrassLand.cpp" />
+    <ClCompile Include="MyWorld\Biome\Ocean.cpp" />
+    <ClCompile Include="MyWorld\Biome\PlainLand.cpp" />
+    <ClCompile Include="MyWorld\Biome\RainForest.cpp" />
+    <ClCompile Include="MyWorld\Biome\SnowField.cpp" />
+    <ClCompile Include="MyWorld\BlockType.cpp" />
+    <ClCompile Include="MyWorld\chunk.cpp" />
+    <ClCompile Include="MyWorld\drawbiomemap.cpp" />
+    <ClCompile Include="MyWorld\DrawBlockEdge.cpp" />
+    <ClCompile Include="MyWorld\DrawClimate.cpp" />
+    <ClCompile Include="MyWorld\drawcloud.cpp" />
+    <ClCompile Include="MyWorld\drawcrosshair.cpp" />
+    <ClCompile Include="MyWorld\DrawGbuffer.cpp" />
+    <ClCompile Include="MyWorld\drawinfo.cpp" />
+    <ClCompile Include="MyWorld\DrawRole.cpp" />
+    <ClCompile Include="MyWorld\DrawSection.cpp" />
+    <ClCompile Include="MyWorld\drawskybox.cpp" />
+    <ClCompile Include="MyWorld\DrawWater.cpp" />
+    <ClCompile Include="MyWorld\EventProcess.cpp" />
+    <ClCompile Include="MyWorld\FireFly\DrawFireFly.cpp" />
+    <ClCompile Include="MyWorld\FireFly\FireFlyBorn.cpp" />
+    <ClCompile Include="MyWorld\FireFly\FireFlyController.cpp" />
+    <ClCompile Include="MyWorld\FireFly\FireFlyFlyAround.cpp" />
+    <ClCompile Include="MyWorld\FireFly\FireFlyRest.cpp" />
+    <ClCompile Include="MyWorld\FireFly\FireFlyGlobalSource.cpp" />
+    <ClCompile Include="MyWorld\ForwardProcess.cpp" />
+    <ClCompile Include="MyWorld\frustumcull.cpp" />
+    <ClCompile Include="MyWorld\GameInit.cpp" />
+    <ClCompile Include="MyWorld\GameRender.cpp" />
+    <ClCompile Include="MyWorld\GenerateBiomeMap.cpp" />
+    <ClCompile Include="MyWorld\generateblock.cpp" />
+    <ClCompile Include="MyWorld\generatecloud.cpp" />
+    <ClCompile Include="MyWorld\generateDecoration.cpp" />
+    <ClCompile Include="MyWorld\generateface.cpp" />
+    <ClCompile Include="MyWorld\generateterrain.cpp" />
+    <ClCompile Include="MyWorld\GlobalLight\UpdateLight.cpp" />
+    <ClCompile Include="MyWorld\GlobalLight\GlobalLightSource.cpp" />
+    <ClCompile Include="MyWorld\globalsource.cpp" />
+    <ClCompile Include="MyWorld\others.cpp" />
+    <ClCompile Include="MyWorld\RoleController\roledestroyblock.cpp" />
+    <ClCompile Include="MyWorld\RoleController\rolecontorller.cpp" />
+    <ClCompile Include="MyWorld\RoleController\rolecontrollersource.cpp" />
+    <ClCompile Include="MyWorld\RoleController\roledrop.cpp" />
+    <ClCompile Include="MyWorld\RoleController\roleFunctionBlock.cpp" />
+    <ClCompile Include="MyWorld\RoleController\rolejump.cpp" />
+    <ClCompile Include="MyWorld\RoleController\rolemove.cpp" />
+    <ClCompile Include="MyWorld\RoleController\rolestop.cpp" />
+    <ClCompile Include="MyWorld\run.cpp" />
+    <ClCompile Include="MyWorld\section.cpp" />
+    <ClCompile Include="MyWorld\updatecameraprojection.cpp" />
+    <ClCompile Include="MyWorld\updatecameraubo.cpp" />
+    <ClCompile Include="MyWorld\updatechunk.cpp" />
+    <ClCompile Include="MyWorld\world.cpp" />
+    <ClCompile Include="OpenGLWidget.cpp" />
+    <ClCompile Include="workspaceboard.cpp" />
+    <QtRcc Include="MyWorld.qrc" />
+    <QtUic Include="itemboard.ui" />
+    <QtUic Include="MyWorld.ui" />
+    <QtMoc Include="MyWorld.h" />
+    <ClCompile Include="..\Packaged\Cpp\AABB.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\animation.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\bone.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\camera.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\computeshader.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\cube.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\deferredrendering.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\directionallight.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\directionallightshadow.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\ebo.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\fbo.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\Include.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\lightbase.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\matrix.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\mesh.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\model.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\octree.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\offscreenrender.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\pointlight.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\pointlightshadow.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\program.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\raymatch.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\raytracing.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\rbo.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\shader.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\shadowbase.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\spotlight.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\spotlightshadow.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\ssbo.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\sync.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\texture2d.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\texture2dgeneral.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\threadpool.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\ubo.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\vao.cpp" />
+    <ClCompile Include="..\Packaged\Cpp\vbo.cpp" />
+    <ClCompile Include="MyWorld.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="workspaceboard.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Packaged\Include\AABB.h" />
+    <ClInclude Include="..\Packaged\Include\animation.h" />
+    <ClInclude Include="..\Packaged\Include\AnimationPlayer.h" />
+    <ClInclude Include="..\Packaged\Include\bone.h" />
+    <ClInclude Include="..\Packaged\Include\BufferBase.hpp" />
+    <ClInclude Include="..\Packaged\Include\camera.h" />
+    <ClInclude Include="..\Packaged\Include\computeshader.h" />
+    <ClInclude Include="..\Packaged\Include\cube.h" />
+    <ClInclude Include="..\Packaged\Include\deferredrendering.h" />
+    <ClInclude Include="..\Packaged\Include\directionallight.h" />
+    <ClInclude Include="..\Packaged\Include\directionallightshadow.h" />
+    <ClInclude Include="..\Packaged\Include\ebo.h" />
+    <ClInclude Include="..\Packaged\Include\fbo.h" />
+    <ClInclude Include="..\Packaged\Include\fsm.hpp" />
+    <ClInclude Include="..\Packaged\Include\Headers.h" />
+    <ClInclude Include="..\Packaged\Include\Include.h" />
+    <ClInclude Include="..\Packaged\Include\lightbase.h" />
+    <ClInclude Include="..\Packaged\Include\matrix.h" />
+    <ClInclude Include="..\Packaged\Include\mesh.h" />
+    <ClInclude Include="..\Packaged\Include\model.h" />
+    <ClInclude Include="..\Packaged\Include\octree.h" />
+    <ClInclude Include="..\Packaged\Include\offscreenrender.h" />
+    <ClInclude Include="..\Packaged\Include\ParticleSystem.h" />
+    <ClInclude Include="..\Packaged\Include\pointlight.h" />
+    <ClInclude Include="..\Packaged\Include\pointlightshadow.h" />
+    <ClInclude Include="..\Packaged\Include\program.h" />
+    <ClInclude Include="..\Packaged\Include\raymatch.h" />
+    <ClInclude Include="..\Packaged\Include\raytracing.h" />
+    <ClInclude Include="..\Packaged\Include\rbo.h" />
+    <ClInclude Include="..\Packaged\Include\shader.h" />
+    <ClInclude Include="..\Packaged\Include\shadowbase.h" />
+    <ClInclude Include="..\Packaged\Include\spotlight.h" />
+    <ClInclude Include="..\Packaged\Include\spotlightshadow.h" />
+    <ClInclude Include="..\Packaged\Include\ssbo.h" />
+    <ClInclude Include="..\Packaged\Include\sync.h" />
+    <ClInclude Include="..\Packaged\Include\Texture1D.h" />
+    <ClInclude Include="..\Packaged\Include\texture2d.h" />
+    <ClInclude Include="..\Packaged\Include\texture2dgeneral.h" />
+    <ClInclude Include="..\Packaged\Include\threadpool.h" />
+    <ClInclude Include="..\Packaged\Include\TransformFeedBack.h" />
+    <ClInclude Include="..\Packaged\Include\ubo.h" />
+    <ClInclude Include="..\Packaged\Include\vao.h" />
+    <ClInclude Include="..\Packaged\Include\vbo.h" />
+    <ClInclude Include="..\Packaged\Include\vec.hpp" />
+    <QtMoc Include="bag.h" />
+    <ClInclude Include="BagButton.h" />
+    <QtMoc Include="itemboard.h" />
+    <QtMoc Include="exposureadjust.h" />
+    <ClInclude Include="MyWorld\afterrendering.h" />
+    <ClInclude Include="MyWorld\BackwardProcess.h" />
+    <ClInclude Include="MyWorld\Bag\BagGlobalSource.h" />
+    <ClInclude Include="MyWorld\Bag\BagInit.h" />
+    <ClInclude Include="MyWorld\Bag\DrawBag.h" />
+    <ClInclude Include="MyWorld\Bag\DrawItemBoard.h" />
+    <ClInclude Include="MyWorld\Bag\UpdateItemBoard.h" />
+    <ClInclude Include="MyWorld\Bag\UpdateWorkSpace.h" />
+    <ClInclude Include="MyWorld\BlockType.h" />
+    <ClInclude Include="MyWorld\chunk.h" />
+    <ClInclude Include="MyWorld\drawbiomemap.h" />
+    <ClInclude Include="MyWorld\DrawBlockEdge.h" />
+    <ClInclude Include="MyWorld\DrawClimate.h" />
+    <ClInclude Include="MyWorld\drawcloud.h" />
+    <ClInclude Include="MyWorld\drawcrosshair.h" />
+    <ClInclude Include="MyWorld\DrawGbuffer.h" />
+    <ClInclude Include="MyWorld\drawinfo.h" />
+    <ClInclude Include="MyWorld\DrawRole.h" />
+    <ClInclude Include="MyWorld\DrawSection.h" />
+    <ClInclude Include="MyWorld\drawskybox.h" />
+    <ClInclude Include="MyWorld\DrawWater.h" />
+    <ClInclude Include="MyWorld\EventProcess.h" />
+    <ClInclude Include="MyWorld\FireFly\DrawFireFly.h" />
+    <ClInclude Include="MyWorld\FireFly\FireFlyBorn.h" />
+    <ClInclude Include="MyWorld\FireFly\FireFlyController.h" />
+    <ClInclude Include="MyWorld\FireFly\FireFlyFlyAround.h" />
+    <ClInclude Include="MyWorld\FireFly\FireFlyRest.h" />
+    <ClInclude Include="MyWorld\FireFly\FireFlyGlobalSource.h" />
+    <ClInclude Include="MyWorld\ForwardProcess.h" />
+    <ClInclude Include="MyWorld\frustumcull.h" />
+    <ClInclude Include="MyWorld\GameInit.h" />
+    <ClInclude Include="MyWorld\GameRender.h" />
+    <ClInclude Include="MyWorld\GenerateBiomeMap.h" />
+    <ClInclude Include="MyWorld\generateblock.h" />
+    <ClInclude Include="MyWorld\generatecloud.h" />
+    <ClInclude Include="MyWorld\generateDecoration.h" />
+    <ClInclude Include="MyWorld\generateface.h" />
+    <ClInclude Include="MyWorld\generateterrain.h" />
+    <ClInclude Include="MyWorld\GlobalLight\UpdateLight.h" />
+    <ClInclude Include="MyWorld\GlobalLight\GlobalLightSource.h" />
+    <ClInclude Include="MyWorld\globalsource.h" />
+    <ClInclude Include="MyWorld\Header.h" />
+    <ClInclude Include="MyWorld\myworld.h" />
+    <ClInclude Include="MyWorld\others.h" />
+    <ClInclude Include="MyWorld\PerlinNoise.hpp" />
+    <ClInclude Include="MyWorld\RoleController\roledestroyblock.h" />
+    <ClInclude Include="MyWorld\RoleController\rolecontorller.h" />
+    <ClInclude Include="MyWorld\RoleController\rolecontrollersource.h" />
+    <ClInclude Include="MyWorld\RoleController\roledrop.h" />
+    <ClInclude Include="MyWorld\RoleController\roleFunctionBlock.h" />
+    <ClInclude Include="MyWorld\RoleController\rolejump.h" />
+    <ClInclude Include="MyWorld\RoleController\rolemove.h" />
+    <ClInclude Include="MyWorld\RoleController\rolestop.h" />
+    <ClInclude Include="MyWorld\run.h" />
+    <ClInclude Include="MyWorld\section.h" />
+    <ClInclude Include="MyWorld\updatecameraprojection.h" />
+    <ClInclude Include="MyWorld\updatecameraubo.h" />
+    <ClInclude Include="MyWorld\updatechunk.h" />
+    <ClInclude Include="MyWorld\world.h" />
+    <QtMoc Include="workspaceboard.h" />
+    <QtMoc Include="OpenGLWidget.h" />
+    <QtMoc Include="Info.h" />
+    <ClInclude Include="MyWorld\Biome\BiomeBase.h" />
+    <ClInclude Include="MyWorld\Biome\Desert.h" />
+    <ClInclude Include="MyWorld\Biome\Forest.h" />
+    <ClInclude Include="MyWorld\Biome\GrassLand.h" />
+    <ClInclude Include="MyWorld\Biome\Header.h" />
+    <ClInclude Include="MyWorld\Biome\Ocean.h" />
+    <ClInclude Include="MyWorld\Biome\PlainLand.h" />
+    <ClInclude Include="MyWorld\Biome\RainForest.h" />
+    <ClInclude Include="MyWorld\Biome\SnowField.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyWorld.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

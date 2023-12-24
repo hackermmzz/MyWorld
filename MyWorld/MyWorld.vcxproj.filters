@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Packaged">
+      <UniqueIdentifier>{8311e423-1c37-4cb1-ab7e-d80233366ef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Packaged">
+      <UniqueIdentifier>{5728d286-5975-4773-abdd-e8f8ee45ae7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Biome">
+      <UniqueIdentifier>{bb9ae77e-7ffa-4dfe-9333-3785d7f113af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Biome">
+      <UniqueIdentifier>{6023b3a1-6cde-4eaa-b80f-a374379c754a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MyWorld">
+      <UniqueIdentifier>{3d18e2f2-8050-4da7-8d42-f63ce3729ba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyWorld">
+      <UniqueIdentifier>{453cde70-11dc-42bd-bbb9-d7ccf764717c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RoleController">
+      <UniqueIdentifier>{a77a2d71-d871-41ce-8e83-805388041bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RoleController">
+      <UniqueIdentifier>{b9d0d828-3429-4c23-9269-a448268cfb14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bag">
+      <UniqueIdentifier>{ad52376a-768a-41d4-b7c6-23d0924e5efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bag">
+      <UniqueIdentifier>{f122dfa6-e18e-4b1f-8341-79d084683905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GlobalLight">
+      <UniqueIdentifier>{4d60762c-9fed-4f81-9704-eba42f03da30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GlobalLight">
+      <UniqueIdentifier>{06d110f8-5b25-4f1d-8c9f-2c8e3daaa1c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FireFly">
+      <UniqueIdentifier>{2b7c4fc8-e4b0-4994-86ed-ea1e74903447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FireFly">
+      <UniqueIdentifier>{e62322c4-f504-46b3-b36d-255fe5879c80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MyWorld.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="MyWorld.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="MyWorld.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="MyWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\AABB.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\animation.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\bone.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\camera.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\computeshader.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\cube.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\deferredrendering.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\directionallight.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\directionallightshadow.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\ebo.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\fbo.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\Include.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\lightbase.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\matrix.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\mesh.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\model.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\octree.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\offscreenrender.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\pointlight.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\pointlightshadow.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\program.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\raymatch.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\raytracing.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\rbo.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\shader.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\shadowbase.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\spotlight.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\spotlightshadow.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\ssbo.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\sync.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\texture2d.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\texture2dgeneral.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\threadpool.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\ubo.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\vao.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\vbo.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\GrassLand.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\Ocean.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\RainForest.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\SnowField.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\Forest.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\Desert.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\BiomeBase.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Biome\PlainLand.cpp">
+      <Filter>Source Files\Biome</Filter>
+    </ClCompile>
+    <ClCompile Include="Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\updatechunk.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\world.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\GameInit.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\generateterrain.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\generateblock.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\generateDecoration.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\section.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\chunk.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\frustumcull.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\others.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\GenerateBiomeMap.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\drawbiomemap.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\generateface.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\GameRender.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\EventProcess.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\BackWardProcess.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\BlockType.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\DrawRole.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\updatecameraubo.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\globalsource.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\DrawBlockEdge.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\DrawWater.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\run.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\ForwardProcess.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\drawinfo.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\drawcrosshair.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\afterrendering.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\updatecameraprojection.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\drawskybox.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\drawcloud.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\generatecloud.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\roledestroyblock.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\rolecontrollersource.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\roledrop.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\rolecontorller.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\rolejump.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\rolestop.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\rolemove.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\RoleController\roleFunctionBlock.cpp">
+      <Filter>Source Files\RoleController</Filter>
+    </ClCompile>
+    <ClCompile Include="workspaceboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BagButton.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="itemboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\DrawItemBoard.cpp">
+      <Filter>Source Files\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\BagGlobalSource.cpp">
+      <Filter>Source Files\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\BagInit.cpp">
+      <Filter>Source Files\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\UpdateWorkSpace.cpp">
+      <Filter>Source Files\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\UpdateItemBoard.cpp">
+      <Filter>Source Files\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\.DrawBag.cpp">
+      <Filter>Source Files\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\Bag\DrawBag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\DrawSection.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\GlobalLight\GlobalLightSource.cpp">
+      <Filter>Source Files\GlobalLight</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\GlobalLight\UpdateLight.cpp">
+      <Filter>Source Files\GlobalLight</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\DrawClimate.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\AnimationPlayer.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\FireFly\FireFlyGlobalSource.cpp">
+      <Filter>Source Files\FireFly</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\FireFly\FireFlyRest.cpp">
+      <Filter>Source Files\FireFly</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\FireFly\FireFlyController.cpp">
+      <Filter>Source Files\FireFly</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\FireFly\FireFlyBorn.cpp">
+      <Filter>Source Files\FireFly</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\FireFly\FireFlyFlyAround.cpp">
+      <Filter>Source Files\FireFly</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\DrawGbuffer.cpp">
+      <Filter>Source Files\MyWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\ParticleSystem.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\TransformFeedBack.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Packaged\Cpp\Texture1D.cpp">
+      <Filter>Source Files\Packaged</Filter>
+    </ClCompile>
+    <ClCompile Include="exposureadjust.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWorld\FireFly\DrawFireFly.cpp">
+      <Filter>Source Files\FireFly</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Packaged\Include\AABB.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\animation.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\bone.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\BufferBase.hpp">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\camera.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\computeshader.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\cube.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\deferredrendering.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\directionallight.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\directionallightshadow.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\ebo.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\fbo.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\fsm.hpp">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\Headers.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\Include.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\lightbase.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\matrix.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\mesh.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\model.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\octree.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\offscreenrender.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\pointlight.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\pointlightshadow.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\program.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\raymatch.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\raytracing.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\rbo.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\shader.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\shadowbase.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\spotlight.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\spotlightshadow.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\ssbo.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\sync.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\texture2d.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\texture2dgeneral.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\threadpool.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\ubo.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\vao.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\vbo.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\vec.hpp">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\Header.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\Ocean.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\SnowField.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\Forest.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\Desert.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\BiomeBase.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\PlainLand.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\GrassLand.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Biome\RainForest.h">
+      <Filter>Header Files\Biome</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\afterrendering.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\GameInit.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\chunk.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\world.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\section.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\others.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\generateterrain.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\GenerateBiomeMap.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\globalsource.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\drawbiomemap.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\GameRender.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\frustumcull.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\BlockType.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\generateDecoration.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\generateblock.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\updatechunk.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\generateface.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\updatecameraubo.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\DrawRole.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\DrawWater.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\DrawBlockEdge.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Header.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\EventProcess.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\drawinfo.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\drawcrosshair.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\updatecameraprojection.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\BackwardProcess.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\drawskybox.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\drawcloud.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\generatecloud.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\ForwardProcess.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\myworld.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\run.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\PerlinNoise.hpp">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\rolecontorller.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\roledestroyblock.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\rolecontrollersource.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\rolejump.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\roledrop.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\rolemove.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\rolestop.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\RoleController\roleFunctionBlock.h">
+      <Filter>Header Files\RoleController</Filter>
+    </ClInclude>
+    <ClInclude Include="BagButton.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Bag\DrawItemBoard.h">
+      <Filter>Header Files\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Bag\BagGlobalSource.h">
+      <Filter>Header Files\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Bag\BagInit.h">
+      <Filter>Header Files\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Bag\UpdateWorkSpace.h">
+      <Filter>Header Files\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Bag\UpdateItemBoard.h">
+      <Filter>Header Files\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\Bag\DrawBag.h">
+      <Filter>Header Files\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\DrawSection.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\GlobalLight\GlobalLightSource.h">
+      <Filter>Header Files\GlobalLight</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\GlobalLight\UpdateLight.h">
+      <Filter>Header Files\GlobalLight</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\DrawClimate.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\AnimationPlayer.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\FireFly\FireFlyGlobalSource.h">
+      <Filter>Header Files\FireFly</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\FireFly\FireFlyRest.h">
+      <Filter>Header Files\FireFly</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\FireFly\FireFlyController.h">
+      <Filter>Header Files\FireFly</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\FireFly\FireFlyBorn.h">
+      <Filter>Header Files\FireFly</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\FireFly\FireFlyFlyAround.h">
+      <Filter>Header Files\FireFly</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\DrawGbuffer.h">
+      <Filter>Header Files\MyWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\ParticleSystem.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\TransformFeedBack.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packaged\Include\Texture1D.h">
+      <Filter>Header Files\Packaged</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWorld\FireFly\DrawFireFly.h">
+      <Filter>Header Files\FireFly</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Info.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="OpenGLWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="workspaceboard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="itemboard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="bag.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="exposureadjust.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyWorld.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="workspaceboard.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="itemboard.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

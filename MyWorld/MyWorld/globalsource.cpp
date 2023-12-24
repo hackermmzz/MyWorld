@@ -1,0 +1,40 @@
+#include "globalsource.h"
+Camera camera{};
+Matrix camera_view;
+Matrix camera_view_inverse;
+size_t camera_mode = 0;
+float real_camera_distance=5;
+ivec2 camera_chunk;
+ivec3 camera_section;
+GLenum BiomeTypeAround[3][3];
+Ubo*camera_ubo;
+Matrix camera_projection;
+Face camera_face[6];
+long long render_begin;
+long long render_end;
+long long render_time;
+float fps;
+queue<size_t>EventQueue;
+GLuint window_width,window_height;
+int mouse_movement_offset_x,mouse_movement_offset_y;
+QOpenGLWidget*OpenglWidget;
+Program*BlockRenderProgram;
+Texture2DGeneral* skybox;
+PerlinNoise ErosionNoise;
+PerlinNoise HumidityNoise;
+PerlinNoise TemperatureNoise;
+PerlinNoise ContinentalNoise;
+PerlinNoise PeaksNoise;
+ThreadPool*threadPool;
+Texture2DGeneral*cloud;
+Program*CloudRenderProgram;
+int WORLD_DEFAULT_SEED = 7790;//默认的世界种子"MMZZ"
+bool Show_Info;
+Uint Face_Render_Nums;
+Uint Section_Render_Nums;
+map<ivec3,Block>BlockChanged;
+map<ivec3, Block>LightBlock;
+Program* WaterRenderProgram;
+DeferredRendering* GBuffer;
+Program* GBufferProgram;
+///////////////////////////////////////////////////
