@@ -408,12 +408,15 @@ inline Vec<T, 3> Vec<T, 3>::cross(const Vec<T, 3>&v)
 template<class T, Uint N>
 inline bool operator<(const Vec<T, N>& v1, const Vec<T, N>& v2)
 {
-    T temp1, temp2;
     for (Uint i = 0; i < N; ++i)
     {
-        temp1 = v1.get(i), temp2 = v2.get(i);
-        if (temp1<temp2)return 1;
-        if (temp1 > temp2)return 0;
+        bool flag=1;
+       for(Uint j=0j<i;++j)
+           if(v1.get(j)!=v2.get(j)){
+               flag=0;
+               break;
+           }
+        if(flag&&v1.get(i)<v2.get(i))return 1;
     }
     return 0;
 }
