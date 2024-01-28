@@ -411,7 +411,7 @@ inline bool operator<(const Vec<T, N>& v1, const Vec<T, N>& v2)
     for (Uint i = 0; i < N; ++i)
     {
         bool flag=1;
-       for(Uint j=0j<i;++j)
+       for(Uint j=0;j<i;++j)
            if(v1.get(j)!=v2.get(j)){
                flag=0;
                break;
