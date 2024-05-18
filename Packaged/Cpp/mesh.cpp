@@ -167,7 +167,7 @@ void Mesh::Draw(Program &program,GLuint instance)
     vao->bind();
     ///////////////////判断是否实例化绘制
     if(instance)
-    api->glDrawElementsInstanced(GL_TRIANGLES,indices_size,GL_UNSIGNED_INT,0,100);
+    api->glDrawElementsInstanced(GL_TRIANGLES,indices_size,GL_UNSIGNED_INT,0,instance);
     else
     api->glDrawElements(GL_TRIANGLES, indices_size, GL_UNSIGNED_INT, 0);
 }
